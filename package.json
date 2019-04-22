@@ -1,11 +1,12 @@
 {
   "name": "blog-app-challenge-starter-files",
   "version": "0.0.1",
-  "description": "Shopping list app to demo 'the modern classic'",
-  "repository": "https://github.com/Thinkful-Ed/blog-app-mongoose-challenge-solution",
+  "description": "blog app mongoose challenge",
+  "repository": "https://github.com/Qorvinus/blog-app-mongoose-challenge",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "mocha"
   },
   "dependencies": {
     "express": "^4.16.3",
