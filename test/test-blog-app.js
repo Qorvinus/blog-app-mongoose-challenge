@@ -63,11 +63,11 @@ describe('Blogposts API resource', function() {
         .then(function(_res) {
           res = _res;
           expect(res).to.have.status(200);
-          expect(res.body.blogposts).to.have.lengthOf.at.least(1);
+          expect(res.body.posts).to.have.lengthOf.at.least(1);
           return BlogPost.count();
         })
         .then(function(count) {
-          expect(res.body.blogposts).to.have.lengthOf(count);
+          expect(res.body.posts).to.have.lengthOf(count);
         });
     });
 
@@ -78,10 +78,10 @@ describe('Blogposts API resource', function() {
         .then(function(res) {
           expect(res).to.have.status(200);
           expect(res).to.be.json;
-          expect(res.body.blogposts).to.be.a('array');
-          expect(res.body.blogposts).to.have.lengthOf.at.least(1);
+          expect(res.body.posts).to.be.a('array');
+          expect(res.body.posts).to.have.lengthOf.at.least(1);
 
-          res.body.blogposts.forEach(function(blogpost) {
+          res.body.posts.forEach(function(blogpost) {
             expect(resBlogpost.id).to.equal(blogpost.id);
             expect(resBlogpost.author).to.equal(blogpost.author);
             expect(resBlogpost.title).to.equal(blogpost.title);
@@ -166,3 +166,4 @@ describe('Blogposts API resource', function() {
             });
         });
       });
+});
